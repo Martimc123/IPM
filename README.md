@@ -8,7 +8,7 @@ This project was done in collaboration with:
 
 ```
 Francisco Oliveira ist196860
-Martim Correia ist197326
+Allan Fernandes ist197281
 
 ```
 
