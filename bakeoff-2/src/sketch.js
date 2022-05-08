@@ -127,24 +127,24 @@ function draw()
     // Draw all 16 targets
 	for (var i = 0; i < 16; i++) drawTarget(i);
     
-    // ADDED: linhas para targets
+    // ADDED: lines for target
     let previous_target = getTargetBounds(trials[current_trial-1]);
     let current_target = getTargetBounds(trials[current_trial]);
     let next_target = getTargetBounds(trials[current_trial+1]);
       
-    // linha para anterior
+    // line from the previous
     stroke(255,0,0);
     strokeWeight(4);
     line(current_target.x, current_target.y, previous_target.x, previous_target.y);
     
-    // linha para proximo
+    // line for the next
     if (!compareTargets(previous_target, current_target)) {
       stroke(0,104,245);
       strokeWeight(4);
       line(current_target.x, current_target.y, next_target.x, next_target.y);
     }
     
-    // indica x2
+    // sequence, click two times
     if (compareTargets(current_target, next_target)) {
       drawX2(current_target);
     }
@@ -168,7 +168,7 @@ function drawX2(target) {
   
 }
 
-// ADDED: sound effect to the hits
+// ADDED: sound effect to hits
 function soundHit(slider){
   wrongSound.stop();
   rightSound.setVolume(slider.value());
